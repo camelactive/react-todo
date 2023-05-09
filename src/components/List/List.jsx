@@ -4,20 +4,22 @@ import {toDoContext} from "../../App"
 const List = () => {
 const toDoContextData = useContext(toDoContext)
 const {state, setState} = toDoContextData
-function deleteTodo() {
-  console.log("deleteTodo")
+function deleteTodo({todoIndex}) {
+
+  setState(state.filter((todo,idx)=>idx !== todoIndex))
 }
-function doneTodo() {
-  console.log("doneTodo")
+function doneTodo(todoIndex) {
+  // console.log("doneTodo")
+  // console.log(todoIndex)
 }
   return (
     <div className={styles.toDoList}>
-    {state.map((toDoitem)=>{
+    {state.map((toDoitem, todoIndex)=>{
         return (
             <div className={styles.toDoItem} key={toDoitem.id}>{toDoitem.text}
             <div>
-                <button className="doneBtn" onClick={()=>{doneTodo()}}>done</button>
-                <button className="deleteBtn" onClick={()=>{deleteTodo()}}>delete</button>
+                <button className="doneBtn" onClick={()=>{doneTodo({todoIndex})}}>done</button>
+                <button className="deleteBtn" onClick={()=>{deleteTodo({todoIndex})}}>delete</button>
             </div>
         </div>
         )
