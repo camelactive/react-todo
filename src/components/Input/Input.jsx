@@ -1,4 +1,4 @@
-import { useContext, useRef, useState } from "react"
+import { useContext, useState } from "react"
 import {toDoContext} from "../../App"
 import styles from "./Input.module.css"
 const Input = () => {
@@ -7,8 +7,11 @@ const Input = () => {
     const [stateInput, setStateInput] = useState("")
     function addTodo() {
         if (stateInput) {
-            console.log(state)
-            setState([...state,{text:stateInput}])
+            setState([...state,
+                {
+                    text:stateInput,
+                    id:Math.random()*1000
+            }])
             setStateInput("")
         }
         else{

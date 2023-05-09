@@ -1,8 +1,9 @@
 .header {
   background-color: white;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   color: white;
   height: 100px;
 }
