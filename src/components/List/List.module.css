@@ -1,0 +1,19 @@
+.toDoItem{
+    width: 50%;
+    border: 3px solid white;
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.toDoList{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.doneBtn{}
+.deleteBtn{}
