@@ -10,7 +10,8 @@ const Input = () => {
             setState([...state,
                 {
                     text:stateInput,
-                    id:Math.random()*1000
+                    id:Math.random()*1000,
+                    isDone:false
             }])
             setStateInput("")
         }
