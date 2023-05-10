@@ -17,14 +17,18 @@ const Input = () => {
         else{
             alert("Нельзя добавить пустое поле задачи")
         }
-  
-    
     }
+    function handleKeyPress (event){
+        if(event.key === 'Enter'){
+            addTodo()
+        }
+      }
+      
     
   return (
-    <div className={styles.inputComponent}>
-        <input className={styles.input} onChange={(event)=>{setStateInput(event.target.value)}} type="text" value={stateInput} placeholder="enter your to do"/>
-        <button onClick={()=>{addTodo()}}>New to do</button>
+    <div className={styles.inputComponent} >
+        <input className = {styles.input} onChange={(event)=>{setStateInput(event.target.value)}} onKeyDown={handleKeyPress} type="text" value={stateInput} placeholder="enter your to do"/>
+        <button className = {styles.inputBtn} onClick={addTodo}>New to do</button>
     </div>
   )
 }

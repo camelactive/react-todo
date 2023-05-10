@@ -11,6 +11,13 @@ width: 80%;
 font-size: 30px;
 margin: 10px;
 }
+.inputBtn{
+    background-color: darkgreen;
+    color: white;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+}
 
 @media screen and (max-width: 1000px) {
     .input{
