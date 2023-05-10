@@ -8,9 +8,20 @@ import List from "./components/List/List";
 export const toDoContext = createContext();
 function App() {
 	const [state, setState] = useState([]);
+	const [isLightTheme, setIsLightTheme] = useState({
+		lightTheme: true,
+		text: "light",
+	});
+	function themeChangerHandler() {
+		setIsLightTheme({
+			lightTheme: !isLightTheme.lightTheme,
+			text: isLightTheme.lightTheme ? "light" : "dark",
+		});
+	}
 	return (
-		<div className="App">
-			<toDoContext.Provider value={{ state, setState }}>
+		<div className={isLightTheme.lightTheme ? "App" : "AppDark"}>
+			<toDoContext.Provider
+				value={{ state, setState, isLightTheme, themeChangerHandler }}>
 				<Header />
 				<Input />
 				<List />

@@ -5,6 +5,13 @@
   bottom: 0;
   width: 100%;
 }
+.footerDark {
+  background-color:rgb(2, 23, 15);
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 .logo {
   height: 100%;
   pointer-events: none;
