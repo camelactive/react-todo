@@ -18,3 +18,16 @@
 }
 .doneBtn{}
 .deleteBtn{}
+
+@media screen and (max-width: 1000px) {
+    .toDoItem{
+        width: 80%;
+        font-size: 20px;
+    }
+  }
+@media screen and (max-width: 600px) {
+    .toDoItem{
+        width: 95%;
+        font-size: 16px;
+    }
+  }
