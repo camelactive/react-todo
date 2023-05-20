@@ -27,7 +27,6 @@ const todoSlice = createSlice({
              state.todos = state.todos.filter((todo,id)=> id !== action.payload.todoIndex)
         },
         doneTodoAction(state, action){
-            // console.log(action.payload.todoIndex)
            state.todos.map((element,id)=>{
             if ( id === action.payload.todoIndex) {
                return element.isDone = !element.isDone

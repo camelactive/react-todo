@@ -1,8 +1,9 @@
 import {configureStore, combineReducers} from "@reduxjs/toolkit"
 import todoReducer from "./todoSlice"
+import storage from "redux-persist/lib/storage"
 import {
-    persistStore,
     persistReducer,
+    persistStore, 
     FLUSH,
     REHYDRATE,
     PAUSE,
@@ -10,8 +11,6 @@ import {
     PURGE,
     REGISTER
     } from "redux-persist"
-import storage from "redux-persist/lib/storage"
-
 
 const persistConfig = {
  key :"root",
