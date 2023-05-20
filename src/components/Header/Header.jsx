@@ -1,16 +1,12 @@
-import { useContext } from "react";
 import logo from "../../todolist-logo.png";
 import ThemeChanger from "../ThemeChanger/ThemeChanger";
-import {toDoContext} from "../../App"
 import styles from "./Header.module.css"
+import { useSelector } from "react-redux";
 const Header = () => {
-
-  const toDoContextData = useContext(toDoContext)
-  const {isLightTheme} = toDoContextData
-  console.log(isLightTheme)
+  const {theme} = useSelector(state => state.todo)
   return (
  <>
-    <header className = {isLightTheme.lightTheme ? styles.header : styles.headerDark}>
+    <header className = {theme.lightTheme ? styles.header : styles.headerDark}>
         <img src={logo} className = {styles.logo} alt="logo" />
         <ThemeChanger/>
     </header>

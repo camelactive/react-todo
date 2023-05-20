@@ -1,15 +1,15 @@
-import { useContext } from "react"
-import {toDoContext} from "../../App"
 import styles from "./ThemeChanger.module.css"
-
+import {useSelector, useDispatch} from "react-redux"
+import {themeChangerAction} from "../../store/todoSlice"
 
 const ThemeChanger = () => {
-  const toDoContextData = useContext(toDoContext)
-  const {themeChangerHandler,isLightTheme} = toDoContextData
+  const {theme} = useSelector(state => state.todo)
+  const dispatch = useDispatch()
+  const themeChanger =() => {dispatch(themeChangerAction())}
   return (
     <div className={styles.themeChanger}>
-        <button className={isLightTheme.lightTheme ? styles.themeChangerBtnLight :styles.themeChangerBtnDark} onClick={themeChangerHandler}>
-           {isLightTheme.text}
+        <button className={theme.lightTheme ? styles.themeChangerBtnLight :styles.themeChangerBtnDark} onClick={themeChanger}>
+           {theme.text}
         </button>
         </div>
   )

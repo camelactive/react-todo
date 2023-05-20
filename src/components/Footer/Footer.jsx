@@ -1,13 +1,13 @@
 import logo from "../../todolist-logo.png";
-import {toDoContext} from "../../App"
 import styles from "./Footer.module.css"
-import { useContext } from "react";
+import { useSelector } from "react-redux";
+
 const Footer = () => {
-  const toDoContextData = useContext(toDoContext)
-  const {isLightTheme} = toDoContextData
+  const {theme} = useSelector(state => state.todo)
+
   return (
  <>
-    <header className = {isLightTheme.lightTheme ? styles.footer : styles.footerDark}>
+    <header className = {theme.lightTheme ? styles.footer : styles.footerDark}>
         <img src={logo} className = {styles.logo} alt="logo" />
     </header>
 </>
