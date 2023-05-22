@@ -9,6 +9,7 @@ const Header = () => {
     <header className = {theme.lightTheme ? styles.header : styles.headerDark}>
         <img src={logo} className = {styles.logo} alt="logo" />
         <ThemeChanger/>
+       
     </header>
 </>
   )

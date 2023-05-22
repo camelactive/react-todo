@@ -1,8 +1,7 @@
 import logo from "../../todolist-logo.png";
-import styles from "./Footer.module.css"
 import { useSelector } from "react-redux";
-import info from "../../static/info"
-
+import styles from "./Footer.module.css"
+import { Link } from "react-router-dom";
 const Footer = () => {
   const {theme} = useSelector(state => state.todo)
 
@@ -10,7 +9,7 @@ const Footer = () => {
  <>
     <footer className = {theme.lightTheme ? styles.footer : styles.footerDark}>
         <img src={logo} className = {styles.logo} alt="logo" />
-        <span className={styles.info}>{info}</span>
+        <Link to="/info"> info </Link>
     </footer>
 </>
   )

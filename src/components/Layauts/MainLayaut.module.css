@@ -1,0 +1,10 @@
+.MainLayaut{
+    position: relative;
+    min-height: 100vh;
+    background-color: rgb(145, 100, 16);
+}
+.MainLayautDark{
+    position: relative;
+    min-height: 100vh;
+    background-color:rgb(2, 23, 15);
+}

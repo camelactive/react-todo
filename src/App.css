@@ -4,14 +4,10 @@
 .App {
   text-align: center;
   background-color: rgb(145, 100, 16);
-  min-height: 100vh;
-  position: relative;
 }
 .AppDark {
   text-align: center;
   background-color:rgb(2, 23, 15);
-  min-height: 100vh;
-  position: relative;
 }
 
 

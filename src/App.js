@@ -1,6 +1,4 @@
 import "./App.css";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
 import Input from "./components/Input/Input";
 import List from "./components/List/List";
 import { useSelector } from "react-redux";
@@ -10,10 +8,8 @@ function App() {
 
 	return (
 		<div className={theme.lightTheme ? "App" : "AppDark"}>
-				<Header />
 				<Input />
 				<List />
-				<Footer />
 		</div>
 	);
 }
